@@ -61,7 +61,7 @@ static gboolean do_stamp(GtkWidget *widget,
   gchar *dot, *slash;
   dot = g_utf8_strrchr(p, -1, '.');
   slash = g_utf8_strrchr(p, -1, '/');
-  if(dot && dot > slash){
+  if(dot && dot > slash + 1){
     noext_name = malloc(sizeof(char) * (dot-p+1));
     memcpy(noext_name, p, dot - p);
     noext_name[dot-p] = '\0';
