@@ -75,6 +75,7 @@ static gboolean do_stamp(GtkWidget *widget,
   cairo_surface_write_to_png(cairo_get_target(cr), filename);
   cairo_destroy(cr);
   g_free(filename);
+  free(noext_name);
 
   image_index++;
   if(!images[image_index]){
