@@ -1,0 +1,15 @@
+This program enables you to add a stamp / watermark to a couple of images, at a **chosen postiion for each**.
+
+Building
+========
+Make sure you have ``gcc``, ``make`` and GTK 2 development files ready, then run ``make`` in the top directory.
+
+Running
+=======
+Run the program like this::
+
+./imagestamp -p pattern.png png_images_list.png
+
+The program will show you the given images one by one, with the ``pattern.png`` overlapping at the mouse cursor. Choose the postiion you want to 'stamp' the ``pattern.png`` by clicking. Composite images will be saved where the original images are, with ``_p`` append to their root names; that is, ``example.png`` will have the stamped / watermarked version with the name ``example_p.png``.
+
+.. vim: ft=rst:
